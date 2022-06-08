@@ -1,0 +1,55 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Files"] = "Files";
+
+    <h2>Files</h2>
+    <h3><i>Files Folder</i></h3>
+    <br />
+    @model List<FileModel>
+    {<div class="table-responsive">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>File Name</th>
+                        <th>Download Option</th>
+                        <th>Delete Option</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>defaultFile </td>
+                        <td><button type=button class="btn btn-success" onclick="Download()" @Html.ActionLink("Files", "Download")> Download</button>  </td>
+                        <td><button type=button class="btn btn-danger" onclick="Delete()" @Html.ActionLink("Home", "Delete")> Delete</button> </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function Delete() {
+            $(this).parent().remove();
+        }
+        function Download() {
+            alert("File is downloading")
+        }
+
+    </script>
+}

@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title Home</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="Style.css" />
+
+</head>
+
+<body>
+ 
+    <h1>Index</h1>
+    <h2>Sub-heading</h2><br/>
+
+    <div class="row">
+          <div class="IndexC">
+              <h2>Description</h2>
+              <p>Lorem ipsum</p>
+          </div>
+          <div class="IndexC">
+              <h2>Option Selection</h2>
+              <form class="option">
+                  <input type="radio" id="Document" value="Document">
+                  <label for="Document">Document</label><br>
+                  <input type="radio" id="Image" value="Image">
+                  <label for="Image">Image</label><br>
+                  <input type="radio" id="Video" value="Video">
+                  <label for="Video">Video</label>
+                  <br/>
+                  <label for="chosenFile">Choose File</label>
+                  <input type="file" id="chosenFile" name="chosenFile">
+                  <br/>
+                  <input type="submit" value="Submit">
+
+
+              </form>
+          </div>
+     </div>
+
+</body>
+
+
+<style>
+    .IndexC {
+        float: left;
+    }
+
+    .left {
+        width: 25%;
+    }
+
+    .right {
+        width: 75%;
+    }
+</style>
+</html>
+

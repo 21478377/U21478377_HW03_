@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Videos"] = "Videos";
+
+    <h2>Videos</h2>
+    <h3><i>Videos Folder</i></h3>
+    <br />
+    @model List<FileModel>
+    <div container-fluid>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="https://th.bing.com/th/id/R.ac437be180fdac5dbcd8e75e6efa373c?rik=9dMmG%2bqO7jB%2bQw&pid=ImgRaw&r=0" onclick="Fancy()" id="video" class="fancybox">
+                <p>defaultVideo.mp4</p>
+                <div class="col-md-4">
+                    <td><button type=button class="btn btn-success" onclick="Download()"  @Html.ActionLink("Files", "Download"><a asp-action="DownloadFile()" asp-controller="Home"> Download</a></button>  </td>
+                    <td><button type=button class="btn btn-danger" onclick="Delete()"> Delete</button> </td>
+                </div>
+            </div>
+            foreach(){
+            @Html.ActionLink("Download", "Download");
+            }
+
+
+        </div>
+    </div>
+    <script>
+        //fancy box
+        function Fancy() {
+            //create pop-up fancy box
+            $(document).ready(function () {
+                $(".fancybox").fancybox();
+            });
+        }
+            }
+
+
+        function Delete() {
+            $(this).parent().remove();
+        }
+        function Download() {
+            alert("File is downloading")
+        }
+    </script>
+}

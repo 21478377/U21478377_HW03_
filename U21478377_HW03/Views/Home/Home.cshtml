@@ -1,0 +1,70 @@
+﻿@*
+    Home page
+
+*@
+@{
+    ViewData["Home"] = "Home Page";
+
+
+
+
+<h1>Home</h1><h2>Media Uploading system</h2><br />
+<div class="row">
+        <div class="col-lg-7">
+            <h2>Description</h2><br/>
+            <p>This media updating system will have a form where users can select the type of file they want to upload
+            from their computer, and then upload it onto the system <br/>
+            The files uploaded will be updated onto the system and a list. The user will be able to delete and download any 
+            files displayed from a list of files.<br/>
+            The user will be able to also upload images onto the system. These images will be stored on the system, 
+            and displayed for the users' ease. The images can be deleted or downloaded. <br/>
+            The user will be able to upload videos onto the system. These videos will be stored on the system, and 
+            be played by the user. The user will be able to download and delete videos at their discretion.</p>
+        </div>
+
+        <div class="col-sm-5">
+            <h2>Option Selection</h2>
+
+            <form method="post" enctype="multipart/form-data" asp-controller="FileController" asp-action="File">
+                
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="Document" name="optradio" value="Document" onclick="getRadioValue()">Document
+                    <label class="form-check-label" for="Document"></label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="Image" name="optradio" value="Image" onclick="getRadioValue()">Image
+                    <label class="form-check-label" for="Image"></label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="Videos" name="optradio" value="Videos" onclick="getRadioValue()">Videos
+                    <label class="form-check-label" for="Videos"></label>
+                </div><br/><br/>
+                <input type=file name="file" required id="file" /> <br /><br/>
+                <button type=button class="btn btn-success"> Submit</button>
+                
+            </form>
+        </div>
+</div>
+
+
+
+
+            <script>
+                function getRadioValue() {
+               
+                }
+            </script>
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
